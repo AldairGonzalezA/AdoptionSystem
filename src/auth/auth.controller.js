@@ -3,7 +3,7 @@ import Usuario from '../users/user.model.js';
 import {generarJWT} from '../helpers/generate-jwt.js';
 import { json } from 'express';
 
-export const login = async () =>{
+export const login = async (req,res) =>{
     const  {correo, password} = req.body;
 
     try {
@@ -17,7 +17,7 @@ export const login = async () =>{
 
         if (!usuario.estado) {
             return res.status(400).json({
-                msg: 'El usuario no exite en la base de datos'
+                msg: 'El usuario no existe en la base de datos'
             })
         }
 

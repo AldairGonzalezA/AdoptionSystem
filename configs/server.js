@@ -17,7 +17,7 @@ const configurarMiddlewares = (app) => {
     app.use(limiter);
 }
 
-const configurarRutas = () =>{
+const configurarRutas = (app) =>{
     const authPath = '/adoptionSystem/v1/auth';
     
     app.use(authPath, authRoutes);
@@ -34,7 +34,7 @@ const connectarDB = async () =>{
 
 export const iniciarServidor = async () =>{
     const app = express();
-    const port = process.env.PORT || 3000;
+    const port = process.env.PORT || 3001;
 
     await connectarDB();
     configurarMiddlewares(app);

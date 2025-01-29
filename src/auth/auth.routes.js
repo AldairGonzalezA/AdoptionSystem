@@ -18,7 +18,7 @@ router.post(
 );
 
 router.post(
-    '/registar',
+    '/registrar',
     [
         check('nombre', 'El nombre es obligatorio').not().isEmpty(),
         check('password', 'La contraseña debe ser mayor a 6 caracteres').isLength({min: 6}),
