@@ -16,6 +16,11 @@ const UserSchema = Schema({
         type: String,
         unique: true
     },
+    email: {
+        type: String,
+        required: [true, "Email is required"],
+        maxLength: [25, "Can;t be overcome 25 characters"]
+    },
     password: {
         type: String,
         required: [true, 'Password is required']
@@ -46,7 +51,9 @@ const UserSchema = Schema({
 );
 
 UserSchema.methods.toJson = function(){
-    const {__v, password, _id, ...usuario} = this.toObjects();
+    const {__v, password, _id, ...usuario
+        
+    } = this.toObjects();
     usuario.uid = _id;
     return usuario;
 }

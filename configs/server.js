@@ -10,7 +10,6 @@ import authRoutes from '../src/auth/auth.routes.js';
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
-    app.use(express.json());
     app.use(cors());
     app.use(express.json());
     app.use(helmet());
@@ -28,6 +27,7 @@ const connectarDB = async () =>{
         console.log('Conexión exitosa con la base de datos');        
     } catch (error) {
         console.log('Error al conectar con la base de datos', error);
+        process.exit(1);
     }
 }
 
@@ -38,12 +38,10 @@ export const initServer = async () =>{
     try {
         middlewares(app);
         connectarDB();
-        routes();
-
-
+        routes(app);
         app.listen(port);   
         console.log(`Server running on port ${port}`);
     } catch (err) {
-        console.log(`Server init failerd ${EvalError}`)
+        console.log(`Server init failerd ${err}`);
     }
 }
