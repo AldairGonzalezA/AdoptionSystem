@@ -18,3 +18,11 @@ export const existenteEmail = async (correo = '') => {
     }
 }
 
+export const existeUserById = async (id= '') => {
+    const existUser = await User.findById(id);
+
+    if (!existUser) {
+        throw new Error(`El usuario con el id ${id} no existe en la base de datos`)
+    }
+}
+
