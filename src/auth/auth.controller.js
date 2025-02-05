@@ -11,7 +11,7 @@ export const login = async (req,res) =>{
         const lowerEmail = email ? email.toLowerCase() : null;
         const lowerUsername = username ? username.toLowerCase() : null;
 
-        const user = await Usuario.finOne({
+        const user = await Usuario.findOne({
             $or: [
                 {email: lowerEmail},
                 {username: lowerUsername}

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check} from "express-validator";
-import  {getUsers, getUserById, updateUser } from "./user.controller.js";
+import  {getUsers, getUserById, updateUser, deleteUser } from "./user.controller.js";
 import { existeUserById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { uploadProfilePicture} from "../middlewares/multer-upload.js";
@@ -28,6 +28,16 @@ router.put(
         validarCampos
     ],
     updateUser
+)
+
+router.delete(
+    "/:id",
+    [
+        check("id", "id is invalid").isMongoId(),
+        check("id").custom(existeUserById),
+        validarCampos
+    ],
+    deleteUser
 )
 
 export default router;
