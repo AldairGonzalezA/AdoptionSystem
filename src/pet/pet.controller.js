@@ -99,6 +99,28 @@ export const searchPet = async (req, res) => {
     }
 }
 
+export const updatePet = async (req, res = response) => {
+    try {
+        const { id } = req.params;
+        const { _id, ...data } = req.body;
+        
+        const pet = await Pet.findByIdAndUpdate(id, data, {new: true});
+
+        res.status(200).json({
+            success: true,
+            msg: 'Pet updated successfully',
+            pet
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg:'Error to update the pet',
+            error
+        })
+    }
+}
+
 export const deletePet = async (req, res) =>{
     const { id } = req.params;
 
