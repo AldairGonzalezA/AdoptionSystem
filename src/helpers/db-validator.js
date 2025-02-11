@@ -1,6 +1,7 @@
 import Role from '../role/role.models.js';
 import User from '../users/user.model.js';
 import Pet from '../pet/pet.model.js';
+import Appointment from '../appointment/appointment.model.js';
 
 export const esRoleValido = async (role = '') => {
     
@@ -33,5 +34,13 @@ export const existePetById = async (id = '') =>{
     if(!existePet) {
         throw new Error(`The pet with ID ${id} is not exists in the database`);
     }
+}
+
+export const existeAppointmnet = async (id = '') =>{
+    const existeAppointment = await Appointment.findById(id);
+
+    if(!existeAppointment){
+        throw new Error(`The appointment with ID ${id} is not exists in the database`);
+    }    
 }
 

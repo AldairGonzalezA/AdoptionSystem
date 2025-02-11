@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const Appointment = Schema({
+const AppointmentSchema = Schema({
     keeper:{
         type: Schema.Types.ObjectId,
         ref: 'user',
@@ -12,7 +12,7 @@ const Appointment = Schema({
         required: true
     },
     date:{
-        type: Date,
+        type: String,
         required:true
     },
     status:{

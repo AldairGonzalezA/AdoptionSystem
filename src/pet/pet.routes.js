@@ -5,6 +5,7 @@ import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from '../middlewares/validar-jwt.js'
 import { uploadPetPicture } from "../middlewares/multer-upload.js";
 import { existePetById } from "../helpers/db-validator.js";
+import { tieneRol } from "../middlewares/validar-roles.js";
 
 const router = Router();
 
@@ -45,6 +46,7 @@ router.delete(
     '/:id',
     [
         validarJWT,
+        tieneRol("ADMIN_ROLE"),
         check("id", "ID is invalid").isMongoId(),
         validarCampos
     ],

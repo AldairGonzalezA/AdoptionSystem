@@ -15,6 +15,13 @@ export const saveAppointment = async (req, res) =>{
             })
         }
 
+        if(!pet){
+            return res.status(404),json({
+                success: false,
+                msg: 'Pet not found'
+            })
+        }
+
         const appointmet = new Appointment({
             ...data,
             keeper: user._id,
@@ -105,7 +112,7 @@ export const searchAppointment = async (req, res) =>{
     }
 }
 
-export const updatePet = async (req, res = response) =>{
+export const updateAppointment = async (req, res = response) =>{
     try {
         const { id } = req.params;
         const { _id,createAt, ...data  } = req.body;
