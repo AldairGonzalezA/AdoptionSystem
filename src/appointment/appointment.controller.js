@@ -9,31 +9,31 @@ export const saveAppointment = async (req, res) =>{
         const pet = await Pet.findOne({name: data.name});
 
         if(!user){
-            return res.status(404).josn({
+            return res.status(404).json({
                 success: false,
                 msg: 'Ownen not found'
             })
         }
 
         if(!pet){
-            return res.status(404),json({
+            return res.status(404).json({
                 success: false,
                 msg: 'Pet not found'
             })
         }
 
-        const appointmet = new Appointment({
+        const appointment = new Appointment({
             ...data,
             keeper: user._id,
-            pet: pet.name
+            pet: pet._id,
         });
 
-        await appointmet.save();
+        await appointment.save();
 
         res.status(200).json({
             success: true,
             msg: 'Appointment scheduled succesfuly',
-            appointmet
+            appointment
         })
 
     } catch (error) {
@@ -45,7 +45,7 @@ export const saveAppointment = async (req, res) =>{
     }
 }
 
-export const getAppointmemts = async (req, res) => {
+export const getAppointments = async (req, res) => {
     const {limite = 10, desde = 0} = req.query;
     const query = {status: true};
 
@@ -58,7 +58,7 @@ export const getAppointmemts = async (req, res) => {
             const owner = await User.findById(appointment.keeper)
             const pet = await Pet.findById(appointment.pet)
             return {
-                ...appointment.toObjects(),
+                ...appointment.toObject(),
                 keeper: owner ? owner.name: "Owner not found",
                 pet: pet ? pet.name: "Pet not found"
             }
@@ -75,7 +75,7 @@ export const getAppointmemts = async (req, res) => {
     } catch (error) {
         res.status(500).json({
             success: false,
-            message:'Error to get appointments'.
+            message:'Error to get appointments',
             error
         })
     }
@@ -98,7 +98,7 @@ export const searchAppointment = async (req, res) =>{
         res.status(200).json({
             success: true,
             appointment:{
-                ...appointment.toObjects(),
+                ...appointment.toObject(),
                 keeper: owner ? owner.name : "Owner not found",
                 pet: pet ? pet.name : "Pet not found"
             }
@@ -107,7 +107,7 @@ export const searchAppointment = async (req, res) =>{
         res.status(500).json({
             success: false,
             msg:'Error to search the appointment',
-            error
+            error: error.message
         })
     }
 }
@@ -137,7 +137,7 @@ export const deleteAppointment = async (req, res) =>{
     const { id } = req.params;
 
     try {
-        await Appointment.findByIdAndUpdate(id, {status: "Cancelado"});
+        await Appointment.findByIdAndUpdate(id, {status: false},{new: true});
 
         res.status(200).json({
             success: true,

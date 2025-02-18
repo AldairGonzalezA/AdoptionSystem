@@ -22,7 +22,7 @@ router.post(
 router.get("/",getPets)
 
 router.get(
-    "/:id",
+    "/findPet/:id",
     [
         validarJWT,
         check("id", "ID is not valid").isMongoId(),

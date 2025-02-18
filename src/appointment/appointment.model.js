@@ -16,9 +16,8 @@ const AppointmentSchema = Schema({
         required:true
     },
     status:{
-        type: String,
-        enum: ['Pendiente', 'Confirmado', 'Cancelado', 'Completado'],
-        default:'Pendiente'
+        type: Boolean,
+        default: true
     },
     reason:{
         type: String

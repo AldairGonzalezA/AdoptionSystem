@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "67aacb97ef2b32f1dfb68ada"
+  },
+  "name": "Pablo",
+  "surname": "Perez",
+  "username": "Pablito",
+  "email": "pablito@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$Y7VRnzLBKQIIhP1+vb8KPw$N2+gPiSCXDDQJjXEtJD4jw8tzZ5Zr75X3N1i6fnjSAo",
+  "profilePicture": null,
+  "phone": "11111111",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-11T04:01:27.577Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T04:49:23.101Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aacda4ef2b32f1dfb68ae6"
+  },
+  "name": "Pedro",
+  "surname": "Jimenez",
+  "username": "Pedrito",
+  "email": "pedro@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$d8kDPc0Js3uUTv1qNvotsQ$zPfu4oPnarL7TBdWrYV5L0NRQmlSYqCw5eRPd+PlEgE",
+  "profilePicture": null,
+  "phone": "22222222",
+  "role": "ADMIN_ROLE",
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-11T04:10:12.931Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T04:51:10.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b41017318fa371c232a785"
+  },
+  "name": "Alexander",
+  "surname": "Martinez",
+  "username": "Alex_Martinez",
+  "email": "alex@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$TQEUsHW40dnGAxwxOVk+fA$eE0OAJ5L5/NCwX/ck4uXcBzapGRXxn0z77i30hVw3Tk",
+  "profilePicture": null,
+  "phone": "18496027",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-18T04:44:07.064Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T04:49:25.841Z"
+  }
+}]

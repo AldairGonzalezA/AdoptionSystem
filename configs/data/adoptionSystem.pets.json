@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "67aacc84ef2b32f1dfb68adf"
+  },
+  "name": "Spike",
+  "description": "Color cafe con manchas blancas",
+  "age": 3,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67aacb97ef2b32f1dfb68ada"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67b4133bfc9ac49f4d4a5cb3"
+  },
+  "name": "Jake",
+  "description": "Hora de Aventura",
+  "age": 3,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67b41017318fa371c232a785"
+  },
+  "status": false
+}]

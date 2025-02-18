@@ -1,0 +1,74 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Appointments",
+    "collectionId": "297478b4-5e65-44fe-9a46-668667e8f467",
+    "dateExported": "2025-02-18T05:26:59.144Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "596f2d7a-8889-43c9-98b2-0387e581c89e",
+            "colId": "297478b4-5e65-44fe-9a46-668667e8f467",
+            "containerId": "",
+            "name": "SaveAppointment",
+            "url": "http://localhost:3000/adoptionSystem/v1/appointment/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-18T05:10:32.195Z",
+            "modified": "2025-02-18T05:11:24.416Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTM4OTksImV4cCI6MTczOTg1NzQ5OX0.IfUTeKUyf-93Cnn__X6ApLdIVhY9q1kMAySXBRMitHM"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"alex@gmail.com\",\n  \"name\":\"Spike\",\n  \"date\":\"10/05/2025\",\n  \"reason\":\"Chequeo Mensual\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "bbc604eb-1502-43f6-8eb4-ecc977b39255",
+            "colId": "297478b4-5e65-44fe-9a46-668667e8f467",
+            "containerId": "",
+            "name": "GetsAppointment",
+            "url": "http://localhost:3000/adoptionSystem/v1/appointment/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-02-18T05:12:14.556Z",
+            "modified": "2025-02-18T05:14:08.633Z",
+            "headers": []
+        },
+        {
+            "_id": "4624fac0-ff27-42d3-a334-449d1bf42395",
+            "colId": "297478b4-5e65-44fe-9a46-668667e8f467",
+            "containerId": "",
+            "name": "SearchAppointment",
+            "url": "http://localhost:3000/adoptionSystem/v1/appointment/findAppointment/67b4170b2d5ebeab7f593f24",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-02-18T05:21:35.793Z",
+            "modified": "2025-02-18T05:22:14.106Z",
+            "headers": []
+        },
+        {
+            "_id": "8dc73024-0593-4b6b-8072-e68c24de8726",
+            "colId": "297478b4-5e65-44fe-9a46-668667e8f467",
+            "containerId": "",
+            "name": "DeleteAppointment",
+            "url": "http://localhost:3000/adoptionSystem/v1/appointment/67b417cf2d5ebeab7f593f32",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2025-02-18T05:23:18.400Z",
+            "modified": "2025-02-18T05:26:28.288Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTYyMzQsImV4cCI6MTczOTg1OTgzNH0.kfHJZJQbbD3bjbgAjv4nmA9M_l6k641Hw2h7zJeyTvU"
+                }
+            ]
+        }
+    ],
+    "ref": "tO9l3v9-HqRetY3re1t0cYFlxdYHtzRp3mGOii-9bWgDzmI4-eVdrk2mQ_1CnKYgl6wTlhLuOrvXtA5oykHuiQ"
+}

@@ -1,35 +1,91 @@
 {
     "clientName": "Thunder Client",
-    "collectionName": "Users",
-    "collectionId": "2e6a84c3-29d2-4cde-a98b-79d86b4c4a4d",
-    "dateExported": "2025-02-10T23:04:04.262Z",
+    "collectionName": "User",
+    "collectionId": "c3eb4cd9-8557-42f8-a4bc-917545ed778f",
+    "dateExported": "2025-02-18T04:59:24.516Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "0ff562c4-48f1-4e9b-8afd-deb5ca49f5fd",
-            "colId": "2e6a84c3-29d2-4cde-a98b-79d86b4c4a4d",
+            "_id": "6a029319-07a4-4c6e-92f6-8fd98696b240",
+            "colId": "c3eb4cd9-8557-42f8-a4bc-917545ed778f",
             "containerId": "",
             "name": "GetUsers",
             "url": "http://localhost:3000/adoptionSystem/v1/users/",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2025-02-10T22:51:49.054Z",
-            "modified": "2025-02-10T22:52:41.734Z",
+            "created": "2025-02-18T04:46:12.577Z",
+            "modified": "2025-02-18T04:46:19.049Z",
             "headers": []
         },
         {
-            "_id": "94ab8967-3484-4519-9cb5-ae2feb0f4bcd",
-            "colId": "2e6a84c3-29d2-4cde-a98b-79d86b4c4a4d",
+            "_id": "a4ef963b-4c8f-46a5-8b39-50f47885ad66",
+            "colId": "c3eb4cd9-8557-42f8-a4bc-917545ed778f",
             "containerId": "",
             "name": "SearchUser",
-            "url": "http://localhost:3000/adoptionSystem/v1/users/findUser/67aa79a7d02f6c8495ea57b3",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/findUser/67b41017318fa371c232a785",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2025-02-10T22:53:45.167Z",
-            "modified": "2025-02-10T22:59:08.817Z",
+            "created": "2025-02-18T04:46:41.226Z",
+            "modified": "2025-02-18T04:47:06.753Z",
             "headers": []
+        },
+        {
+            "_id": "5da6e1ee-af8a-4208-aff4-8d33328e60b0",
+            "colId": "c3eb4cd9-8557-42f8-a4bc-917545ed778f",
+            "containerId": "",
+            "name": "UpdateUser",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67b41017318fa371c232a785",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-02-18T04:47:31.907Z",
+            "modified": "2025-02-18T04:48:01.117Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"Alex_Martinez\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "e6eb77bd-3890-42b6-96e3-025fbd1c2900",
+            "colId": "c3eb4cd9-8557-42f8-a4bc-917545ed778f",
+            "containerId": "",
+            "name": "UpdatePassword",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/updatePassword/67b41017318fa371c232a785",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-02-18T04:48:15.903Z",
+            "modified": "2025-02-18T04:49:25.854Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTM4OTksImV4cCI6MTczOTg1NzQ5OX0.IfUTeKUyf-93Cnn__X6ApLdIVhY9q1kMAySXBRMitHM"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\":\"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4c070a58-aee2-4c3c-8f07-02fd17939b6e",
+            "colId": "c3eb4cd9-8557-42f8-a4bc-917545ed778f",
+            "containerId": "",
+            "name": "DeleteUser",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67aacda4ef2b32f1dfb68ae6",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-02-18T04:49:45.906Z",
+            "modified": "2025-02-18T04:51:10.295Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTM4OTksImV4cCI6MTczOTg1NzQ5OX0.IfUTeKUyf-93Cnn__X6ApLdIVhY9q1kMAySXBRMitHM"
+                }
+            ]
         }
     ],
-    "ref": "IUti7pB-R_ln6o1ARTOaK2hfW1DtLnaGCVNMFSCUsmxaOW1s9gdHKaNjwVxp0zD_gkNmf_haGhnku4ebxK3RUg"
+    "ref": "v3MJbI9btVxJ7lixubK6msLlTD9fXe6ISUqfKhImabDQ2pdxU0avJKx2Z0ly-Fu9WevEL1eSzjq5f2V3s48eug"
 }

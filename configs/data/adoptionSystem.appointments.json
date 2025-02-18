@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "67b4155fa17a696ba5bbeb92"
+  },
+  "keeper": {
+    "$oid": "67b41017318fa371c232a785"
+  },
+  "pet": {
+    "$oid": "67aacc84ef2b32f1dfb68adf"
+  },
+  "date": "10/05/2025",
+  "status": "Pendiente",
+  "reason": "Chequeo Mensual",
+  "createdAt": {
+    "$date": "2025-02-18T05:06:39.747Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-18T05:06:39.747Z"
+  }
+}]

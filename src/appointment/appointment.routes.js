@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getAppointmemts, searchAppointment, deleteAppointment, saveAppointment } from "./appointment.controller.js";
+import { getAppointments, searchAppointment, deleteAppointment, saveAppointment } from "./appointment.controller.js";
 import { existeAppointmnet } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { tieneRol } from "../middlewares/validar-roles.js";
@@ -8,7 +8,7 @@ import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router();
 
-router.get("/", getAppointmemts)
+router.get("/", getAppointments)
 
 router.get(
     "/findAppointment/:id",

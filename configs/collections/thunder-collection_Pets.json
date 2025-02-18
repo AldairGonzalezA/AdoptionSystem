@@ -1,62 +1,96 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "Pets",
-    "collectionId": "66e3ad07-2f81-40d2-b422-aa6ce43f1bd0",
-    "dateExported": "2025-02-10T22:48:17.388Z",
+    "collectionId": "8cd0a5e0-5f91-4a81-9584-08b444602261",
+    "dateExported": "2025-02-18T04:59:40.730Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "6ee3328e-0bab-4fcb-89ff-9a1e1fd41075",
-            "colId": "66e3ad07-2f81-40d2-b422-aa6ce43f1bd0",
+            "_id": "fe75d0bf-5822-4bb0-bcc1-0dd982c4353c",
+            "colId": "8cd0a5e0-5f91-4a81-9584-08b444602261",
             "containerId": "",
-            "name": "AgregarPet",
-            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
-            "method": "POST",
+            "name": "GetPets",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-02-18T04:51:46.534Z",
+            "modified": "2025-02-18T04:52:02.605Z",
+            "headers": []
+        },
+        {
+            "_id": "00eb3323-75cf-4107-88c8-a41be3f13c8f",
+            "colId": "8cd0a5e0-5f91-4a81-9584-08b444602261",
+            "containerId": "",
+            "name": "SearchPet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/findPet/67aacc84ef2b32f1dfb68adf",
+            "method": "GET",
             "sortNum": 20000,
-            "created": "2025-02-10T22:17:12.947Z",
-            "modified": "2025-02-10T22:38:51.558Z",
+            "created": "2025-02-18T04:52:17.970Z",
+            "modified": "2025-02-18T04:53:21.942Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhNzg2OGQwMmY2Yzg0OTVlYTU3YWYiLCJpYXQiOjE3MzkyMjYyNzIsImV4cCI6MTczOTIyOTg3Mn0.pbOZmwhycPzeje2JbGHsquURCxQhri9jbKkUOEyMbwU"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTM4OTksImV4cCI6MTczOTg1NzQ5OX0.IfUTeKUyf-93Cnn__X6ApLdIVhY9q1kMAySXBRMitHM"
+                }
+            ]
+        },
+        {
+            "_id": "37722169-744e-4862-a5fa-b4375a0b17f1",
+            "colId": "8cd0a5e0-5f91-4a81-9584-08b444602261",
+            "containerId": "",
+            "name": "UpdatePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67aacc84ef2b32f1dfb68adf",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-02-18T04:53:35.942Z",
+            "modified": "2025-02-18T04:54:51.700Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Spike\",\n  \"description\":\"Color cafe con manchas blancas\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f1e9e293-89dc-4eff-a161-979421d1015f",
+            "colId": "8cd0a5e0-5f91-4a81-9584-08b444602261",
+            "containerId": "",
+            "name": "DeletePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67b4133bfc9ac49f4d4a5cb3",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-02-18T04:55:13.148Z",
+            "modified": "2025-02-18T04:58:25.463Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTM4OTksImV4cCI6MTczOTg1NzQ5OX0.IfUTeKUyf-93Cnn__X6ApLdIVhY9q1kMAySXBRMitHM"
+                }
+            ]
+        },
+        {
+            "_id": "ce99ec81-2f5d-4cf9-961b-2c473758b775",
+            "colId": "8cd0a5e0-5f91-4a81-9584-08b444602261",
+            "containerId": "",
+            "name": "SavePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-02-18T04:55:26.136Z",
+            "modified": "2025-02-18T04:57:31.722Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I0MTAxNzMxOGZhMzcxYzIzMmE3ODUiLCJpYXQiOjE3Mzk4NTM4OTksImV4cCI6MTczOTg1NzQ5OX0.IfUTeKUyf-93Cnn__X6ApLdIVhY9q1kMAySXBRMitHM"
                 }
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"Max\",\n  \"description\":\"Pug\",\n  \"age\":6,\n  \"type\":\"Perrito\",\n  \"email\":\"example@gmal.com\"\n}",
+                "raw": "{\n  \"name\": \"Jake\",\n    \"description\": \"Hora de Aventura\",\n    \"age\": 3,\n    \"type\": \"PERRO\",\n    \"email\": \"alex@gmail.com\"\n}",
                 "form": []
             }
-        },
-        {
-            "_id": "02600e07-f2c1-4cbc-897b-70020cc59fc6",
-            "colId": "66e3ad07-2f81-40d2-b422-aa6ce43f1bd0",
-            "containerId": "",
-            "name": "UpdatePet",
-            "url": "http://localhost:3000/adoptionSystem/v1/pets/67aa7d5dd02f6c8495ea57bd",
-            "method": "PUT",
-            "sortNum": 30000,
-            "created": "2025-02-10T22:28:03.766Z",
-            "modified": "2025-02-10T22:44:22.740Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n        \"name\": \"Maximiliano\",\n      \"description\": \"Pitbull\",\n      \"age\": 5,\n      \"type\": \"PERRO\"\n      \n}",
-                "form": []
-            }
-        },
-        {
-            "_id": "e7f2e5b9-e4c3-4956-a7dc-7d56e36fa63c",
-            "colId": "66e3ad07-2f81-40d2-b422-aa6ce43f1bd0",
-            "containerId": "",
-            "name": "GetPets",
-            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
-            "method": "GET",
-            "sortNum": 40000,
-            "created": "2025-02-10T22:29:06.961Z",
-            "modified": "2025-02-10T22:29:11.884Z",
-            "headers": []
         }
     ],
-    "ref": "ZL2izSAPnWfOYri4XbKI-lIZLB6pinNiHth2W_mwCU8wYJ7MiU-g0aWpsfU6_nbZ6ySiQCJJScZq1gIv3YJ7bQ"
+    "ref": "WD6RgoEtsVOpXQtD5ZsYpSudUFQEGjcQqYc0ZodqOK5peyrqbu2tvQiBouB1wFhdvihUOiH-Eja9GE9h8Y1Nuw"
 }
